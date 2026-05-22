@@ -485,6 +485,43 @@ section {
 .ia-single-card:hover {
     transform: translateY(-5px) rotate(1deg);
 }
+.ensaio-title{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    line-height:1.2;
+}
+
+.ensaio-title span{
+    display:block;
+}
+
+.ia-single-card{
+    position:relative;
+}
+
+.floating-example{
+    position:absolute;
+    bottom:-14px;
+    left:50%;
+    transform:translateX(-50%) rotate(4deg);
+
+    background: var(--purple-light);
+    color: var(--purple-dark);
+
+    padding:12px 24px;
+    border-radius:20px;
+
+    font-family: var(--font-display);
+    font-weight:500;
+    font-size:.95rem;
+
+    border:3px solid #fff;
+
+    box-shadow:0 8px 20px rgba(156,108,194,.15);
+
+    z-index:2;
+}
 
 /* --- SOBRE --- */
 .about-container {
