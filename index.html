@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacqueline Silva | Visual & Identity Designer</title>
+    
+    <link rel="icon" type="image/png" href="favi00.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- ESTILOS ADICIONAIS, MELHORIAS VISUAIS E ANIMAÇÕES --- */
+        
+        /* Ajuste e alinhamento dos botões com o ícone do WhatsApp */
+        .cta-btn {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            vertical-align: middle;
+        }
+
+        .cta-btn svg {
+            width: 22px;
+            height: 22px;
+            fill: #25D366;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-btn:hover svg {
+            transform: scale(1.15);
+        }
+
+        /* Reformulação e Embelezamento da Seção de Ensaio com IA */
+        #servico-ia {
+            background-color: rgba(156, 108, 194, 0.02);
+            border-top: 1px solid rgba(156, 108, 194, 0.08);
+            border-bottom: 1px solid rgba(156, 108, 194, 0.08);
+        }
+
+        .service-ia-container {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .service-ia-info h3 {
+            font-size: 1.8rem;
+            color: var(--purple-dark);
+            margin-bottom: 1.2rem;
+            font-weight: 500;
+        }
+
+        .service-ia-info p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+        }
+
+        .service-ia-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-card {
+            background: #ffffff;
+            border: 1px solid rgba(156, 108, 194, 0.12);
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px rgba(35, 19, 51, 0.02);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .detail-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--purple-main);
+        }
+
+        .detail-card h4 {
+            color: var(--purple-dark);
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+            border-bottom: 2px solid var(--purple-light);
+            padding-bottom: 4px;
+            display: inline-block;
+        }
+
+        .detail-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .detail-card ul li {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .card-fullwidth {
+            margin-bottom: 2.5rem;
+            border-left: 4px solid var(--purple-main);
+        }
+
+        /* Layout focado exclusivamente na imagem ex01.png */
+        .gallery-ia-single-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .ia-single-card {
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 28px;
+            box-shadow: 0 20px 45px rgba(35, 19, 51, 0.08);
+            border: 1px solid rgba(156, 108, 194, 0.15);
+            transition: transform 0.4s ease;
+            width: 100%;
+            max-width: 360px;
+        }
+
+        .ia-single-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .ia-single-card:hover {
+            transform: translateY(-5px) rotate(1deg);
+        }
+
+        /* Animações Fluidas nos Feedbacks/Depoimentos */
+        .feedback-card {
+            position: relative;
+            animation: feedbackFadeIn 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) backwards;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .feedback-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .feedback-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(156, 108, 194, 0.12);
+            border-left-width: 8px;
+            background-color: #faf9ff;
+        }
+
+        .feedback-card:hover .user-avatar {
+            transform: scale(1.08);
+        }
+
+        .user-avatar {
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes feedbackFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- OTIMIZAÇÃO EXTRA PARA SMARTPHONES (CELULAR) --- */
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 1.5rem !important; /* Diminui o espaçamento excessivo nas laterais */
+            }
+
+            .section-title {
+                font-size: 2rem !important;
+                margin-bottom: 2rem !important;
+            }
+
+            /* Hero Mobile */
+            .hero {
+                padding-top: 1rem !important;
+                gap: 2.5rem !important;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem !important;
+                line-height: 1.2 !important;
+            }
+
+            .hero-text p {
+                font-size: 1rem !important;
+                margin-bottom: 2rem !important;
+            }
+
+            /* Ajuste de botões para telas pequenas */
+            .cta-btn {
+                width: 100%;
+                padding: 16px 24px !important;
+                font-size: 1rem !important;
+                border-radius: 14px !important;
+            }
+
+            /* Seção Ensaio IA Mobile */
+            .service-ia-container {
+                grid-template-columns: 1fr !important;
+                gap: 2.5rem !important;
+                text-align: center;
+            }
+
+            .service-ia-info h3 {
+                font-size: 1.5rem !important;
+            }
+
+            .service-ia-info p {
+                font-size: 1rem !important;
+            }
+
+            .service-ia-details {
+                grid-template-columns: 1fr !important;
+                text-align: left;
+                gap: 1rem !important;
+            }
+
+            .card-fullwidth {
+                text-align: left;
+                margin-bottom: 2rem !important;
+            }
+
+            .gallery-ia-single-wrapper {
+                order: -1; /* Joga a foto linda do Ensaio para o topo no celular */
+            }
+
+            .ia-single-card {
+                max-width: 290px;
+            }
+
+            /* Feedbacks Mobile */
+            .feedbacks-grid {
+                gap: 1.5rem !important;
+            }
+
+            .feedback-card {
+                padding: 1.8rem !important;
+            }
+
+            .feedback-text {
+                font-size: 0.95rem !important;
+            }
+
+            /* Sobre Mobile */
+            .about-container {
+                gap: 2rem !important;
+            }
+
+            .about-text p {
+                font-size: 1rem !important;
+            }
+
+            .highlight-lead {
+                font-size: 1.15rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logotipo invertido-1.png" alt="Jacque Designer" class="logo-img">
+        </div>
+        
+        <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="#projetos" onclick="closeMenu()">Portfólio</a>
+            <a href="#servico-ia" onclick="closeMenu()">Ensaio IA</a>
+            <a href="#sobre" onclick="closeMenu()">Sobre</a>
+            <a href="#feedbacks" onclick="closeMenu()">Depoimentos</a>
+            <a href="#faq" onclick="closeMenu()">Dúvidas</a>
+            <a href="#contato" class="nav-cta" onclick="closeMenu()">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="contato">
+        <div class="hero-text">
+            <h1>Transformo sua marca em algo que dá <span>orgulho de mostrar.</span></h1>
+            <p>Identidade visual e design estratégico com personalidade marcante para posicionar o seu negócio no mercado e atrair os clientes certos.</p>
+            <a href="https://wa.me/5577988767419?text=Ol%C3%A1%2C%20Jacqueline%21%20Gostaria%20de%20saber%20mais%20sobre%20os%20seus%20servi%C3%A7os%20de%20design." class="cta-btn" target="_blank">
+                <svg viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.4 0 11.986 0a11.9 11.9 0 0 1 8.46 3.505 11.83 11.83 0 0 1 3.54 8.464c-.005 6.533-5.342 11.88-11.929 11.88-1.996 0-3.96-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.296 1.478 4.93 1.478 5.405 0 9.798-4.382 9.802-9.764a9.74 9.74 0 0 0-2.915-6.921A9.78 9.78 0 0 0 11.97 1.08c-5.41.001-9.803 4.384-9.803 9.768a9.74 9.74 0 0 0 1.468 4.969l-1.062 3.87 3.978-1.037zm11.234-5.59c-.31-.154-1.829-.902-2.107-1.002-.278-.1-.48-.154-.68.154-.2.308-.775.977-.95 1.181-.175.205-.35.23-.66.077-1.336-.667-2.225-1.164-3.111-2.68-.236-.404.236-.375.675-1.251.075-.154.037-.288-.018-.394-.056-.106-.48-1.156-.658-1.582-.172-.415-.347-.359-.48-.359-.122-.002-.264-.002-.405-.002a.78.78 0 0 0-.564.263c-.19.205-.724.708-.724 1.722 0 1.013.738 1.993.84 2.13.102.134 1.422 2.226 3.491 3.08.493.203.878.324 1.179.42.496.156.947.133 1.304.08.397-.06 1.83-.748 2.087-1.47.258-.722.258-1.344.18-1.472-.077-.127-.278-.205-.588-.359z"/>
+                </svg>
+                Fale comigo no WhatsApp
+            </a>
+        </div>
+        
+        <div class="hero-collage">
+            <div class="sticker-frame">
+                <img src="jacqueperfil.jpg" alt="Jacqueline Silva | Designer">
+            </div>
+            <div class="floating-badge">Visual & Identity</div>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <h2 class="section-title">Projetos <span>em Destaque</span></h2>
+        <div class="projects-grid">
+            <a href="https://www.behance.net/gallery/222565435/Mascote-3D-Doce-Sabor" target="_blank" class="project-link">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <div class="project-img" style="background-image: url('mascote3d.png');"></div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Modelagem & Branding</span>
+                        <h3>Mascote 3D - Doce Sabor</h3>
+                        <p>Criação e modelagem de um personagem exclusivo em formato 3D, adicionando carisma, interatividade e doçura na comunicação visual da marca.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/249804583/IDENTIDADE-VISUAL-%28CACHOS%29" target="_blank" class="project-link">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <div class="project-img" style="background-image: url('studiocarol.png');"></div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Identidade Visual</span>
+                        <h3>Identidade Visual - Studio Carol Andrade</h3>
+                        <p>Desenvolvimento de identidade visual conceitual voltada para a beleza natural e o cuidado com cachos, transmitindo elegância, profissionalismo e acolhimento.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/249806587/IDENTIADE-VISUAL%28LOJA-MASCULINA%29" target="_blank" class="project-link">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <div class="project-img" style="background-image: url('zaven.png');"></div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Identidade Visual & Moda</span>
+                        <h3>Identidade Visual - ZAVEN</h3>
+                        <p>Posicionamento de marca e identidade minimalista moderna e forte para loja de moda masculina, focada em sofisticação e estilo contemporâneo urbano.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="servico-ia">
+        <h2 class="section-title">Ensaio Fotográfico <span>Realista com IA</span></h2>
+        <div class="service-ia-container">
+            <div class="service-ia-info">
+                <h3>Fotografia Inteligente e Personalizada</h3>
+                <p>Produzo ensaios totalmente personalizados de acordo com o seu nicho profissional ou em formato e estilo tradicional. Eleve o nível do seu posicionamento digital com imagens ultra-realistas de alta qualidade.</p>
+                
+                <div class="service-ia-details">
+                    <div class="detail-card">
+                        <h4>Pacotes</h4>
+                        <ul>
+                            <li>• 3 imagens — R$20</li>
+                            <li>• 6 imagens — R$35</li>
+                            <li>• 10 imagens — R$50</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h4>Condições</h4>
+                        <p>Entrega via WhatsApp em formato de arquivo. Inclui até 3 alterações antes da sua aprovação final.</p>
+                    </div>
+                </div>
+
+                <div class="detail-card card-fullwidth">
+                    <h4>Forma de Pagamento</h4>
+                    <p><strong>50%</strong> na encomenda e <strong>50%</strong> após a aprovação final (antes da entrega oficial dos arquivos).</p>
+                </div>
+
+                <div class="service-ia-action">
+                    <a href="https://wa.me/5577988767419?text=Ol%C3%A1%2C%20Jacqueline%21%20Gostaria%20de%20encomendar%20um%20Ensaio%20Fotogr%C3%A1fico%20com%20IA." class="cta-btn" target="_blank">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.4 0 11.986 0a11.9 11.9 0 0 1 8.46 3.505 11.83 11.83 0 0 1 3.54 8.464c-.005 6.533-5.342 11.88-11.929 11.88-1.996 0-3.96-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.296 1.478 4.93 1.478 5.405 0 9.798-4.382 9.802-9.764a9.74 9.74 0 0 0-2.915-6.921A9.78 9.78 0 0 0 11.97 1.08c-5.41.001-9.803 4.384-9.803 9.768a9.74 9.74 0 0 0 1.468 4.969l-1.062 3.87 3.978-1.037zm11.234-5.59c-.31-.154-1.829-.902-2.107-1.002-.278-.1-.48-.154-.68.154-.2.308-.775.977-.95 1.181-.175.205-.35.23-.66.077-1.336-.667-2.225-1.164-3.111-2.68-.236-.404.236-.375.675-1.251.075-.154.037-.288-.018-.394-.056-.106-.48-1.156-.658-1.582-.172-.415-.347-.359-.48-.359-.122-.002-.264-.002-.405-.002a.78.78 0 0 0-.564.263c-.19.205-.724.708-.724 1.722 0 1.013.738 1.993.84 2.13.102.134 1.422 2.226 3.491 3.08.493.203.878.324 1.179.42.496.156.947.133 1.304.08.397-.06 1.83-.748 2.087-1.47.258-.722.258-1.344.18-1.472-.077-.127-.278-.205-.588-.359z"/>
+                        </svg>
+                        Encomendar meu Ensaio
+                    </a>
+                </div>
+            </div>
+            
+            <div class="gallery-ia-single-wrapper">
+                <div class="ia-single-card">
+                    <img src="ex01.png" alt="Exemplo Lindo de Ensaio com IA">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2 class="section-title">Quem está <span>por trás do design</span></h2>
+        <div class="about-container">
+            <img src="jacque01.png" alt="Jacqueline Silva" class="about-img">
+            <div class="about-text">
+                <p class="highlight-lead"><span>Me chamo Jaqueline Silva (mais conhecida como Jacque😅)</span>, sou designer criativa especializada em transformar ideias em artes que destacam marcas e criam conexão.</p>
+                <p class="services-box">Trabalho com design para redes sociais, identidade visual, banners, stories, cardápios, catálogos e materiais personalizados, além de criar fotos em IA/Ensaios em IA, mascotes 3D e artes em estilo ilustrado.</p>
+                <p>Meu foco é unir criatividade, personalidade e estratégia para entregar visuais modernos, profissionais e marcantes!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="feedbacks">
+        <h2 class="section-title">O que dizem <span>os parceiros</span></h2>
+        <div class="feedbacks-grid">
+            <div class="feedback-card">
+                <p class="feedback-text">"Mulher, você é muito criativa e bastante profissional, proporcionando muitos recursos e melhorias para o meu trabalho. Grande parte do sucesso do meu trabalho devo a você, pois meu Instagram está mais profissional e gerou mais clientes para mim, o que me permitiu obter mais lucro... Obrigadaaaa👏🏼👏🏼😍"</p>
+                <div class="feedback-user">
+                    <div class="user-avatar" style="background-image: url('eugenia0.png');"></div>
+                    <div class="user-info">
+                        <h4>Eugênia Andrade</h4>
+                        <span>Empreendedora</span>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-card">
+                <p class="feedback-text">"Gostei muito do seu trabalho, ficou exatamente como eu queria 👏🏼😍 Você foi super atenciosa, muito profissional e conseguiu entender perfeitamente tudo o que eu imaginei. O resultado ficou ainda melhor do que eu esperava, e isso fez toda a diferença. Estou muito satisfeita e feliz com o resultado, sem dúvidas seu trabalho superou minhas expectativas. Obrigadaaaa 🥰👏🏼"</p>
+                <div class="feedback-user">
+                    <div class="user-avatar" style="background-image: url('helena0.png');"></div>
+                    <div class="user-info">
+                        <h4>Helena Silva</h4>
+                        <span>Empreendedora</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2 class="section-title">Perguntas <span>Frequentes</span></h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <details>
+                    <summary>QUAL O PRAZO DE ENTREGA?</summary>
+                    <div class="faq-content">
+                        <p>Depende do projeto. O prazo médio é de 10 a 15 dias úteis.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>COMO FUNCIONA O PAGAMENTO?</summary>
+                    <div class="faq-content">
+                        <p>O pagamento é dividido em 50% no início do projeto e 50% após a aprovação final.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>POSSO PEDIR ALTERAÇÕES?</summary>
+                    <div class="faq-content">
+                        <p>Sim! Todos os projetos incluem rodadas de ajustes para garantir que o resultado final fique alinhado com o que você imaginou ✨</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 jacqueline.dsgn. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const menuToggle = document.querySelector('.menu-toggle');
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const menuToggle = document.querySelector('.menu-toggle');
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
